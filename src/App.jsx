@@ -1,7 +1,7 @@
-import Description from "./tempComponents/Description/Description"
-import Feedback from "./tempComponents/Feedback/Feedback";
-import Notification from "./tempComponents/Notification/Notification";
-import Options from "./tempComponents/Options/Options";
+import Description from "./components/Description/Description"
+import Feedback from "./components/Feedback/Feedback";
+import Notification from "./components/Notification/Notification";
+import Options from "./components/Options/Options";
 import { useEffect, useState } from "react";
 
 const objFeedback = {
