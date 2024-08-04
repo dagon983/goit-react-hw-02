@@ -1,7 +1,7 @@
 
-const Notification = ({totalFeedback}) => {
+const Notification = () => {
   return (
-    <div style={{display: totalFeedback === 0 ? "block" : "none"}}>No feedback yet</div>
+    <div>No feedback yet</div>
   )
 }
 

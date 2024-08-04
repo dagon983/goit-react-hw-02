@@ -24,7 +24,7 @@ function App() {
   const positiveFeedback = Math.round(((values.good + values.neutral) / totalFeedback) * 100);
 
   useEffect(() => {
-    window.localStorage.setItem("objFeedback", JSON.stringify(values), []);
+    window.localStorage.setItem("objFeedback", JSON.stringify(values), [values]);
   })
 
 
@@ -48,8 +48,11 @@ function App() {
     <>
     <Description/>
     <Options updateFeedback={updateFeedback} clearTable={clearTable} totalFeedback={totalFeedback}/>
-    <Feedback {...values} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback}/>
-    <Notification totalFeedback={totalFeedback}/>
+    { 
+      totalFeedback === 0 ? 
+      <Notification/> :
+      <Feedback {...values} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback}/>
+    }
     </>
   )
 }

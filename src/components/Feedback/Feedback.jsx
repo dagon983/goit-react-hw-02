@@ -2,7 +2,7 @@
 
 const Feedback = ({good, neutral, bad, totalFeedback, positiveFeedback}) => {
   return (
-    <div style={{display: totalFeedback === 0 ? "none" : "block"}}>
+    <div>
         <p>Good: {good}</p>
         <p>Neutral: {neutral}</p>
         <p>Bad: {bad}</p>
