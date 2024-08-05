@@ -24,8 +24,8 @@ function App() {
   const positiveFeedback = Math.round(((values.good + values.neutral) / totalFeedback) * 100);
 
   useEffect(() => {
-    window.localStorage.setItem("objFeedback", JSON.stringify(values), [values]);
-  })
+    window.localStorage.setItem("objFeedback", JSON.stringify(values));
+  }, [values]);
 
 
   const updateFeedback = feedbackType => {
